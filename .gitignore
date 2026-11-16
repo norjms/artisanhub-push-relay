@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+*.p8
+*.json.key
+keys/

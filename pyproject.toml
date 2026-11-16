@@ -1,0 +1,16 @@
+[project]
+name = "artisanhub-push-relay"
+version = "0.1.0"
+description = "Passes end-to-end encrypted ArtisanHub alerts to Apple and Google push services. Keeps nothing."
+license = "AGPL-3.0-or-later"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
