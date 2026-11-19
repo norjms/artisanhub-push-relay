@@ -50,7 +50,7 @@ class Apns:
         # alert. The app's notification service extension replaces it with the decrypted title and text.
         body = {
             "aps": {
-                "alert": {"title": "ArtisanHub", "body": "New update from your hub"},
+                "alert": {"title": "OpenPrintHQ", "body": "New update from your hub"},
                 "mutable-content": 1,
                 "sound": "default",
             },

@@ -1,4 +1,4 @@
-"""ArtisanHub push relay.
+"""OpenPrintHQ push relay.
 
 A hub cannot reach Apple or Google's push services itself (only the app maker's keys can), so it hands each
 alert to this relay, which passes it on. The alert is encrypted on the hub with a key that only the phone has
@@ -61,7 +61,7 @@ class Limiter:
 
 def create_app(cfg: Config | None = None, apns=None, fcm=None) -> FastAPI:
     cfg = cfg or Config()
-    app = FastAPI(title="ArtisanHub push relay", version=__version__, docs_url=None, redoc_url=None, openapi_url=None)
+    app = FastAPI(title="OpenPrintHQ push relay", version=__version__, docs_url=None, redoc_url=None, openapi_url=None)
     if apns is None and cfg.apns_ready:
         apns = Apns(cfg)
     if fcm is None and cfg.fcm_ready:
@@ -88,7 +88,7 @@ def create_app(cfg: Config | None = None, apns=None, fcm=None) -> FastAPI:
     @app.get("/status")
     def status():
         return {
-            "service": "artisanhub-push-relay",
+            "service": "openprinthq-push-relay",
             "version": __version__,
             "apns": bool(apns),
             "fcm": bool(fcm),
