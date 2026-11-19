@@ -1,7 +1,7 @@
 [project]
-name = "artisanhub-push-relay"
+name = "openprinthq-push-relay"
 version = "0.1.0"
-description = "Passes end-to-end encrypted ArtisanHub alerts to Apple and Google push services. Keeps nothing."
+description = "Passes end-to-end encrypted OpenPrintHQ alerts to Apple and Google push services. Keeps nothing."
 license = "AGPL-3.0-or-later"
 requires-python = ">=3.12"
 

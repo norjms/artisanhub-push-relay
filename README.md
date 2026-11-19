@@ -40,10 +40,10 @@ Anyone can run a relay for their own build of the app: it needs that build's App
 | `RELAY_SOURCE_URL` | the source link `/status` shows (the AGPL asks for one) |
 
 ```sh
-docker build -t artisanhub-push-relay .
+docker build -t openprinthq-push-relay .
 docker run -d --read-only --cap-drop ALL -p 8080:8080 \
   -v /path/to/keys:/keys:ro -e APNS_KEY_FILE=/keys/AuthKey.p8 -e APNS_KEY_ID=... -e APNS_TEAM_ID=... \
-  -e APNS_TOPICS=com.example.app -e FCM_SERVICE_ACCOUNT_FILE=/keys/firebase.json artisanhub-push-relay
+  -e APNS_TOPICS=com.example.app -e FCM_SERVICE_ACCOUNT_FILE=/keys/firebase.json openprinthq-push-relay
 ```
 
 Put it behind HTTPS. A hub uses it when its push relay address is set to it.
