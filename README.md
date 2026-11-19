@@ -1,10 +1,10 @@
-# ArtisanHub push relay
+# OpenPrintHQ push relay
 
-Passes ArtisanHub alerts to phones through Apple's and Google's push services, without being able to read them
+Passes OpenPrintHQ alerts to phones through Apple's and Google's push services, without being able to read them
 and without keeping anything.
 
 Apple and Google only take push messages from whoever holds the app's signing keys, so a self-hosted hub cannot
-reach the ArtisanHub app on a phone by itself. The hub encrypts each alert for one phone and hands the sealed bytes
+reach the OpenPrintHQ app on a phone by itself. The hub encrypts each alert for one phone and hands the sealed bytes
 to this relay; the relay hands them to Apple or Google; the app decrypts them on the phone.
 
 ## What the relay sees, and what it keeps
