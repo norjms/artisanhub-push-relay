@@ -31,7 +31,7 @@ class Config:
     per_ip_per_minute: int = field(default_factory=lambda: int(os.environ.get("RELAY_PER_IP_PER_MINUTE", "240")))
     per_device_per_minute: int = field(default_factory=lambda: int(os.environ.get("RELAY_PER_DEVICE_PER_MINUTE", "30")))
     source_url: str = field(
-        default_factory=lambda: os.environ.get("RELAY_SOURCE_URL", "https://github.com/norjms/artisanhub-push-relay")
+        default_factory=lambda: os.environ.get("RELAY_SOURCE_URL", "https://github.com/norjms/openprinthq-push-relay")
     )
 
     @property
